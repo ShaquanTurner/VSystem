@@ -23,9 +23,20 @@ namespace VSystem
         private void DisplayVotingResult_Load(object sender, EventArgs e)
         {
             
-            lblParishR.Text = Form1.pdisplay;
-            lblCommunityR.Text= Form1.cdisplay;
-            lblProblemsR.Text= Form1.prodisplay;
+               lblParishR.Text = Form1.pdisplay;
+                lblCommunityR.Text = Form1.cdisplay;
+            this.lblProblemsR.Text = Form1.prodisplay;
+           
+
+
+
+
+
+
+
+
+
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

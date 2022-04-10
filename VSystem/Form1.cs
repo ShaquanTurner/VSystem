@@ -263,14 +263,17 @@ namespace VSystem
             pdisplay = ParishesCBox.Text;
             cdisplay = CommunityCBox.Text;
             prodisplay = ProblemCLBox.Text;
-            DisplayVotingResult form = new DisplayVotingResult();
-            form.Show();//ShowDialog();
+            /*foreach(object SelectedItem in ProblemCLBox.Items)
+            {
+                MessageBox.Show(SelectedItem.ToString());
+            }*/
+
             
            
            
             if (ParishesCBox.Text == "")
             {
-                MessageBox.Show("Error Select your Parish ");
+                MessageBox.Show("Error Select your Parish ", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ParishesCBox.Focus();
 
 
@@ -278,23 +281,26 @@ namespace VSystem
            
             else if(CommunityCBox.Text=="")
             {
-                MessageBox.Show("Error Select your Community ");
+                MessageBox.Show("Error Select your Community ", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 CommunityCBox.Focus();
             }
 
            else if (ProblemCLBox.CheckedItems.Count<1)
             {
-                MessageBox.Show("Error Select at least 1 Problem ");
+                MessageBox.Show("Error Select at least 1 Problem ", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ProblemCLBox.Focus();
             }
 
             else {
             MessageBox.Show("Thanks for Voting ");
-                
+                DisplayVotingResult form = new DisplayVotingResult();
+                form.Show();
 
-    }
-             
-    }
+
+
+            }
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
